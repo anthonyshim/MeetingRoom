@@ -1,6 +1,6 @@
-package com.anthony.meetingroom
+package com.anthony.meetingroom.main
 
-import android.databinding.ObservableField
+import androidx.databinding.ObservableField
 
 class MainViewModel {
     var text = ObservableField<String>()

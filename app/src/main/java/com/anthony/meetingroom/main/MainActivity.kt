@@ -1,11 +1,12 @@
-package com.anthony.meetingroom
+package com.anthony.meetingroom.main
 
-import android.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.anthony.meetingroom.R
 import com.anthony.meetingroom.databinding.ActivityMainBinding
 
 import kotlinx.android.synthetic.main.activity_main.*
@@ -14,7 +15,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main).apply {
+        DataBindingUtil.setContentView<ActivityMainBinding>(this,
+            R.layout.activity_main
+        ).apply {
             viewModel = MainViewModel()
         }
 //        setContentView(R.layout.activity_main)
